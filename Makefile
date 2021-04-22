@@ -1,13 +1,10 @@
-.PHONY: cabal2nix nixbuild nixshell
+.PHONY: derive nixbuild clean
 
 nixbuild: clean cabal2nix
 	nix-build release.nix
 
-nixshell: cabal2nix
-	nix-shell release.nix
-
-cabal2nix:
-	cabal2nix .	> default.nix
+derive:
+	cabal2nix .	> cabal.nix
 
 clean:
 	rm -f result
