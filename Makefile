@@ -1,6 +1,6 @@
 .PHONY: derive nixbuild clean
 
-nixbuild: clean cabal2nix
+nixbuild: clean derive
 	nix-build release.nix
 
 derive:
