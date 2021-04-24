@@ -14,7 +14,13 @@ nix-env -iA nixpkgs.lorri
 nix-env -iA nixpkgs.direnv
 ```
 
-Refer this [Makefile](./Makefile) for command usage
+- Refer this [Makefile](./Makefile) for command usage
+
+- Refer [k8s](./k8s) on how to deploy this on kubernetes
+
+## Docker
+
+https://hub.docker.com/r/sagittaros/simple-ping
 
 ## FAQs
 
