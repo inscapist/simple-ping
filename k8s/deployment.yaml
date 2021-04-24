@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simple-ping
+  labels:
+    app: simple-ping
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: simple-ping
+  template:
+    metadata:
+      labels:
+        app: simple-ping
+    spec:
+      containers:
+        - name: simple-ping
+          image: sagittaros/simple-ping:latest
+          ports:
+            - containerPort: 3000
