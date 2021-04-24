@@ -1,4 +1,4 @@
-.PHONY: derive nixbuild clean
+.PHONY: derive nixbuild clean docker
 
 nixbuild: clean derive
 	nix-build release.nix
@@ -9,3 +9,7 @@ derive:
 clean:
 	rm -f result
 
+docker: clean
+	nix-build docker.nix --builders 'ssh://arch x86_64-linux'
+	docker rmi --force simple-ping
+	docker load < result
