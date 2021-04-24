@@ -22,6 +22,10 @@ nix-env -iA nixpkgs.direnv
 
 https://hub.docker.com/r/sagittaros/simple-ping
 
+```sh
+docker run -p 3000:3000 simple-ping
+```
+
 ## FAQs
 
 #### Why not just let load balancer calls /healthz of the web app?
