@@ -1,7 +1,12 @@
 .PHONY: derive nixbuild clean docker
 
-nixbuild: clean derive
-	nix-build release.nix
+# make
+build: clean derive 
+	nix-build
+
+# make install
+install:
+	nix-env -i -f .
 
 derive:
 	cabal2nix .	> cabal.nix
