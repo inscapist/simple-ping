@@ -30,7 +30,7 @@ docker run -p 3000:3000 simple-ping
 
 #### Why not just let load balancer calls /healthz of the web app?
 
-Well, imagine that you are running private cluster (mongodb, redis) that is not meant to serve web requests. Yet you need a health ping capability in order to use Health Checks for Auto Scaling instances.
+Well, imagine that you are running private cluster (mongodb, redis) that is not meant to serve web requests. Yet you need the health ping capability in order to use Health Checks for Auto Scaling instances.
 
 #### Is this project an overkill?
 
