@@ -32,6 +32,8 @@ docker run -p 3000:3000 simple-ping
 
 Well, imagine that you are running private cluster (mongodb, redis) that is not meant to serve web requests. Yet you need the health ping capability in order to use Health Checks for Auto Scaling instances.
 
+https://docs.aws.amazon.com/autoscaling/ec2/userguide/healthcheck.html
+
 #### Is this project an overkill?
 
 Certainly, I am learning Nix.
