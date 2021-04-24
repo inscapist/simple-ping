@@ -34,6 +34,8 @@ Well, imagine that you are running private cluster (mongodb, redis) that is not 
 
 https://docs.aws.amazon.com/autoscaling/ec2/userguide/healthcheck.html
 
+![ELB](./screenshot-elb.png)
+
 #### Is this project an overkill?
 
 Certainly, I am learning Nix.
