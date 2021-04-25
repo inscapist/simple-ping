@@ -6,7 +6,7 @@ build: clean derive
 
 # make install
 install:
-	nix-env -i -f .
+	nix-env -f . -iA simplePing 
 
 derive:
 	cabal2nix .	> cabal.nix
