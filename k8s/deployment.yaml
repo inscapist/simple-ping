@@ -14,6 +14,16 @@ spec:
       labels:
         app: simple-ping
     spec:
+      affinity:
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            - labelSelector:
+                matchExpressions:
+                  - key: app
+                    operator: In
+                    values:
+                      - simple-ping
+              topologyKey: "kubernetes.io/hostname"
       containers:
         - name: simple-ping
           image: sagittaros/simple-ping:latest
